@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <form action="conectDB.php" method="POST">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".login-form").hide();
+                $("login").css("background", "none");
+                $(".login").click(function () {
+                    $(".signup-form").hide();
+                    $(".login-form").show();
+                });
+                $(".signup").click(function () {
+                    $(".signup-form").show();
+                    $(".login-form").hide();
+                });
+
+
+            });
+
+
+
+
+        </script>
+        <html>
+
+        <body>
+            <form method="post" action="conectDB.php" id="doSignUp"></form>
+            <div class="container">
+
+                <div class="signup">Sign Up</div>
+                <div class="login">Log In</div>
+                <div class="signup-form">
+                    <input type="text" placeholder="Your Email Address" class="input" name="sEmail"><br />
+                    <input type="password" placeholder="Choose a Password" class="input" name="sPassword"><br />
+
+                    <input type="text" placeholder="Choose a Username" class="input" name="sUser"><br />
+                    <label>Gender : </label>
+                    <label for="a1">Male </label>
+                    <input type="radio" name="gender" id="a1">
+                    <label for="b1">Female</label>
+
+                    <input type="radio" name="gender" id="b1">
+
+
+                    <div class="btn" name="signupUser">Create Student account</div>
+         
+            </div>
+            <div class="login-form">
+                <input type="text" placeholder="Email or Username" class="input"><br />
+                <input type="password" placeholder="Password" class="input"><br />
+                <div class="btn">log in</div>
+                <span><a href="#">I forgot my username or password.</a></span>
+            </div>
+        </body>
+
+
+        </html>

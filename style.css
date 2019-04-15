@@ -1,0 +1,91 @@
+*{
+
+ margin :0;
+ padding: 0;
+
+}
+
+body{
+    background-color: blanchedalmond;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: fantasy;
+}
+.container{
+
+width: 450px;
+margin:70px auto;
+}
+
+.signup,
+.login{
+width : 50%;
+height :60px;
+float :left;
+text-align: center;
+line-height: 60px;
+cursor: pointer;
+text-transform: uppercase;
+    
+}
+
+.signup-form,.login-form
+{
+box-sizing: border-box;
+text-align: center;
+    border: black;
+
+padding:40px;
+clear: both; 
+width:100%;
+height : 400px;
+}
+
+.input{
+width: 350px;
+box-sizing: border-box;
+ background: none;
+padding: 20px;
+margin-bottom: 25px;
+border: 2px solid #3498db;
+border border-radius: 24px;
+transition: .25s;
+font-family: fantasy;
+    text-align: center;
+    
+}
+
+
+.btn{
+widows:100%;
+background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b);
+    background-size:125%;
+height: 60px;
+line-height: 60px;
+text-transform: uppercase;
+color:black;
+letter-spacing: 1px;
+cursor: pointer;
+margin-bottom: 30px auto;
+text-align: center;
+
+
+
+}
+.btn:hover{
+    background:hotpink ; 
+}
+
+span a{
+    
+    text-decoration: none;
+    color: black;
+    
+    
+}span a:hover{
+    
+    color: darkcyan;
+    
+    
+}
