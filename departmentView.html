@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title> Departments </title>
+  </head>
+  <body>
+  <h1>Departments</h1>
+  <select name="depMenu" id="selectMenu"> 
+    <option>nothing</option>
+    <option value="coursesView.html">compu</option>
+    <option>electro</option>
+    <script type="text/javascript">
+      var consDep=document.getElementById('selectMenu');
+     consDep.onchange=function(){
+var studentChosedep=this.options[this.selectedIndex];
+if(studentChosedep!="nothing"){
+  window.open(studentChosedep.value,"");
+}
+     } 
+      </script>
+</div>
+</body>
+</html>
