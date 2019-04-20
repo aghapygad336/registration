@@ -25,9 +25,10 @@ app.use('/api', App);
 var con = mysql.createConnection({
   host: "remotemysql.com",
   user: "DOYn2nt6oc",
-  password: "7ad5NZgfHB"
+  password: "7ad5NZgfHB",
+  database: "DOYn2nt6oc"
 });
-const server = http.createServer(requestHandler)
+const server = http.createServer(app)
 
 con.connect(function(err) {
   if (err) throw err;

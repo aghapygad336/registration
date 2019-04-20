@@ -3,4 +3,6 @@ var app = express();
 
 module.exports.Testone = (req, res) => {
             console.log("routers is working perfectly!!!");
+            res.end('Hello Node.js Server!');
+
 };
