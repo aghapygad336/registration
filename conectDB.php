@@ -5,10 +5,10 @@ $email = $_POST['email'];
 $gender = $_POST['gender'];
 
 if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) ) {
- $host = "localhost";
-    $dbUsername = "root";
-    $dbPassword = "";
-    $dbname = "users";
+ $host = "remotemysql.com";
+    $dbUsername = "DOYn2nt6oc";
+    $dbPassword = "7ad5NZgfHB";
+    $dbname = "DOYn2nt6oc";
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
     if (mysqli_connect_error()) {

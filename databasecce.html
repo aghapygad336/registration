@@ -5,7 +5,7 @@
 
     <title>Welcome</title>
     <link rel="stylesheet" href="style.css">
-    <form action="conectDB.php" method="POST">
+    <form action="http://localhost:3000/Api/" method="GET">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
             $(document).ready(function () {
@@ -27,10 +27,11 @@
 
 
         </script>
+
         <html>
 
         <body>
-            <form method="post" action="conectDB.php" id="doSignUp"></form>
+            <form method="post" action="http://localhost:3000/Api/" id="doSignUp">
             <div class="container">
 
                 <div class="signup">Sign Up</div>
@@ -47,9 +48,9 @@
 
                     <input type="radio" name="gender" id="b1">
 
-
-                    <div class="btn" name="signupUser">Create Student account</div>
-         
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
             </div>
             <div class="login-form">
                 <input type="text" placeholder="Email or Username" class="input"><br />
@@ -57,7 +58,5 @@
                 <div class="btn">log in</div>
                 <span><a href="">I forgot my username or password.</a></span>
             </div>
-        </body>
-
-
-        </html>
+        </body>            
+</html>
