@@ -6,10 +6,17 @@ $gender = $_POST['gender'];
 //require 
 
 if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) ) {
+<<<<<<< HEAD
  $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
     $dbname = "logincce";
+=======
+ $host = "remotemysql.com";
+    $dbUsername = "DOYn2nt6oc";
+    $dbPassword = "7ad5NZgfHB";
+    $dbname = "DOYn2nt6oc";
+>>>>>>> 6ccbc2c1eea52694f29dc4c619c7ce61b996979b
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
     //check connection sh3'ala wala la2
