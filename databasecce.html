@@ -22,41 +22,51 @@
 
 
             });
-
-
-
-
         </script>
-
         <html>
 
         <body>
-            <form method="post" action="http://localhost:3000/Api/" id="doSignUp">
+          <form method="post" action="http://localhost:3000/Api/" id="doSignUp">
             <div class="container">
-
                 <div class="signup">Sign Up</div>
                 <div class="login">Login</div>
                 <div class="signup-form">
                     <input type="text" placeholder="Your Email Address" class="input" name="sEmail"><br />
                     <input type="password" placeholder="Choose a Password" class="input" name="sPassword"><br />
-
-                    <input type="text" placeholder="Choose a Username" class="input" name="sUser"><br />
-                    <label>Gender : </label>
-                    <label for="a1">Male </label>
-                    <input type="radio" name="gender" id="a1">
-                    <label for="b1">Female</label>
-
-                    <input type="radio" name="gender" id="b1">
-
-                    <input type="submit" value="Submit">
-                </form>
+                                        <input type="text" placeholder="Choose a Username" class="input" name="sUser"><br />
+                        <ul>
+                      <li>
+                        <input type="radio" name="name" id="one" checked />
+                        <label for="one">Male</label>
+                        
+                        <div class="check"></div>
+                      </li>
+                      
+                      <li>
+                        <input type="radio" name="name" id="two" />
+                        <label for="two">Female</label>
+                        
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                    <input type="submit" value="signup Here" class="btn" style="font-family:Orator Std">
+                      
+                </div>
+                <div class="login-form">
+                  <input type="text" placeholder="Email or Username" class="input"><br />
+                  <input type="password" placeholder="Password" class="input"><br />
+                  <input type="submit" value="Login Here" class="btn" style="font-family:Orator Std"><br>
+                  <span><a href="#">I forgot my username or password.</a></span>
+              </div>
+  
             </div>
+
+         
             </div>
-            <div class="login-form">
-                <input type="text" placeholder="Email or Username" class="input"><br />
-                <input type="password" placeholder="Password" class="input"><br />
-                <div class="btn">log in</div>
-                <span><a href="">I forgot my username or password.</a></span>
-            </div>
-        </body>            
-</html>
+          </form>
+
+
+        </body>
+
+
+        </html>
