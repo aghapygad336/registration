@@ -1,36 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 
 <head>
-    
-    <title>Registed Studnts</title>
-</head><body>
+  <meta charset="UTF-8">
+  <title>profile</title>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://getbootstrap.com/2.3.2/assets/css/bootstrap.css'>
+<link rel='stylesheet' href='https://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css'>
 
- <label>Student *mafrodha5od esmo mn database fe phpmyAdmin* </label><br>
-        <label> Name :*mn database fe phpmyAdmin**</label><br>
-        <label> Email :*mn database fe phpmyAdmin**</label><br>
-        <label> ID :*mn database fe phpmyAdmin**</label>
-        <label> Registration Date :*mn database fe phpmyAdmin**</label><br>
+<style>
 
-<label   >Choose Department</label>
-<select name="coursesMenu" id="selectMenu"> 
-        <option>nothing</option>
-    
-    <option value="coursesView.html" >Computer and Communication</option>
-        <option>petro and Gas</option>
-        <option>Electromechanical</option>
-        <option >Construction</option>
-               
-        </select>
-
-        <script type="text/javascript">
-        var consDep=document.getElementById('selectMenu');
-       consDep.onchange=function(){
-var studentChoseCons=this.options[this.selectedIndex];
-if(studentChoseCons!="nothing"){
-    window.open(studentChoseCons.value,"");
+body{
+  background :url('background-rainbow-colorful-smoke-dym-colors-tsvet-fon-abstr.jpg');
+  background-size:cover;
+  font-size:16px;
+  line-height:25px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
 }
-       } 
-        </script>
-            </body>
-            </html>
+
+.container .accordion{
+  width: 400px;
+  margin :100px auto;
+  color : #fff;
+  border-radius: 15px 50px 30px 5px;
+    background :none;
+  border: 1px solid #d3e0ec00;
+}
+
+.container .accordion-group{
+
+  border-radius: 15px 15px 15px 15px;
+  background :#383C47;
+  border:none;
+}
+
+.container .accordion-heading{
+  border-radius: 15px 15px 15px 15px;
+
+  background :#383C47;
+  border-bottom:none;
+  padding :5px;
+}
+
+.container .accordion-heading a{
+  color: #BECAD5;
+  text-decoration:none;
+  border-radius: 15px 15px 15px 15px;
+
+}
+
+.container .accordion-heading span{
+   float:right;
+  margin-top:3px;
+  color:#333
+  
+}
+
+.profile{
+  width:80px;
+  margin: 10px;
+  display:inline-block;
+  border-radius: 15px 15px 15px 15px;
+
+}
+
+.info{
+  border-radius: 15px 15px 15px 15px;
+
+  width: 200px;
+  margin:10px;
+  display:inline-block;
+}
+
+.name{
+  font-weight: bold;
+  color:#5A9BC9;
+}
+
+.details{
+  color:red;
+}
+.message{
+  padding:3px;
+  border-bottom:1px solid #5A9BC9;
+  min-height:40px;
+}
+.msg-pic{
+  width:30px;
+  float :left;
+  margin:5px 10px;
+  border-radius: 15px 15px 15px 15px;
+
+}
+.msg-desc{
+  width:310px;
+  display:inline-block;
+  border-radius: 15px 15px 15px 15px;
+
+}
+
+.container .accordion-body{
+  background :#222930;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 0px 7px #0F1316 inset;
+}
+
+.container .accordion-inner{
+  border:none;
+  font-size:14px;
+  line-height:22px;
+  color: #6388A3;
+  border-radius: 15px 15px 15px 15px;
+  
+  
+}
+ul{
+  position: relative ;
+  top: 55%;
+  left:90%;
+  transform: translate(-50%,-50%);
+}
+.box li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+.box li a{
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  transition: all ease-in-out 250ms;
+}
+.box li a:hover{
+  color: #b9b9b9;
+}
+</style>
+  
+</head>
+
+<body>
+
+  <div class="container">
+      
+<div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">  
+                      <i class="icon-user icon-white"></i>
+                        Student Data
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                      <img class="profile" src="http://www.lumineers.me/images/core/profile-image-zabadnesterling.gif"></img>
+                    
+                    <div class="info">
+                      <div class="name"> mn sql Aghapy</div>
+                      <div class="details">blaa blaaa blaaa</div>
+                    </div>
+                        <div class="desc">
+etla3 geb basko :"D                      
+ </div>
+                     
+                    </div>
+                  </div>
+                </div>
+
+
+                
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                            <i class="icon-envelope icon-white"></i>
+                      Email
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      <div class="message">
+                          <div class="msg-desc">
+has7ab 7 da2aye2 :"D                                                 </div>
+                      </div>
+                      
+                      
+                  
+                 
+                    
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                      <i class="fas fa-venus-mars"></i>
+                   Gender
+                    </a>
+                  </div>
+                  <div id="collapseFour" class="accordion-body collapse">
+                    <div class="accordion-inner">
+Female :"D 
+                    </div>
+                  </div>
+                </div> 
+                
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                      <i class="fas fa-venus-mars"></i>
+                   ID
+                    </a>
+                  </div>
+                  <div id="collapseFive" class="accordion-body collapse">
+                    <div class="accordion-inner">
+07775000 
+                    </div>
+                  </div>
+                </div>
+
+</div>
+
+
+  </container>
+  <div class="box" >
+      <ul>
+        <li><a href="#"><i class="fas fa-home"aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-th-list"aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-th-large"aria-hidden="true"></i></a></li>
+        
+
+    
+        </ul></div>
+  
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://getbootstrap.com/2.3.2/assets/js/bootstrap-collapse.js'></script>
+<script src='https://getbootstrap.com/2.3.2/assets/js/bootstrap-button.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
