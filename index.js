@@ -21,19 +21,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use('/api', App);
-
-var con = mysql.createConnection({
-  host: "remotemysql.com",
-  user: "DOYn2nt6oc",
-  password: "7ad5NZgfHB",
-  database: "DOYn2nt6oc"
-});
 const server = http.createServer(app)
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
 
 
 //connection.once('open', () => app.listen(3000, () => console.log('Listening on port 3000')));
