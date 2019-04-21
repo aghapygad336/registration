@@ -1,135 +1,70 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>LoginSuccssed</title>
-<style>
+  <title>Yaayyyy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-body{
-  font-family:"Arial", Serif;
-  background-color:#f4f4f4;
-  overflow-x:hidden;
-}
+  
+      <link rel="stylesheet" href="LoginDone.css">
 
-.navbar{
-  background-color:#3b5998;
-  overflow:hidden;
-  height:63px;
-}
+  
+</head>
 
-.navbar a{
-  float:left;
-  display:block;
-  color:#f2f2f2;
-  text-align:center;
-  padding:14px 16px;
-  text-decoration:none;
-  font-size:17px;
-}
-
-.navbar ul{
-  margin:8px 0 0 0;
-  list-style:none;
-}
-
-.navbar a:hover{
-  background-color:#ddd;
-  color:#000;
-}
-
-.side-nav{
-  height:100%;
-  width:0;
-  position:fixed;
-  z-index:1;
-  top:0;
-  left:0;
-  background-color:#111;
-  opacity:0.9;
-  overflow-x:hidden;
-  padding-top:60px;
-  transition:0.5s;
-}
-
-.side-nav a{
-  padding:10px 10px 10px 30px;
-  text-decoration:none;
-  font-size:22px;
-  color:#ccc;
-  display:block;
-  transition:0.3s;
-}
-
-.side-nav a:hover{
-  color:brown;
-
-}
-
-.side-nav .btn-close{
-  position:absolute;
-  top:0;
-  right:22px;
-  font-size:36px;
-  margin-left:50px;
-}
-
-#main{
-  transition:margin-left 0.5s;
-  padding:20px;
-  overflow:hidden;
-  width:100%;
-}
-
-@media(max-width:568px){
-  .navbar-nav{display:none}
-}
-
-@media(min-width:568px){
-  /*.open-slide{display:none}*/
-}
-
-
-</style></head>
 <body>
-  <nav class="navbar">
-    <span class="open-slide">
-      <a href="#" onclick="openSlideMenu()">
-        <svg width="30" height="30">
-            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
-        </svg>
-      </a>
-    </span>
 
-    <ul class="navbar-nav">
-      
-    <h1>Database  Welcome</h1>
-    </ul>
-  </nav>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  <div id="side-menu" class="side-nav">
-    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-    <a href="databasecce.html">Home</a>
-    <a href="studentView.html">About</a>
-    <a href="departmentView.html">Department</a>
+
+<div class="container">
+    <div class="items">
+        <div class="icon-wrapper">
+            <i class="fas fa-user-graduate"aria-hidden="true"></i> 
+                </div>
+                <div class="block-name">
+                  <a>About</a>
+                </div>
+              </div>
+              <div class="items">
+
+                  <div class="icon-wrapper">
+                      <i class="fas fa-sign-out-alt"aria-hidden="true"></i> 
+                          </div>
+                          <div class="block-name">
+                            <a>Logout</a>
+                          </div>
+                        </div>
+  <div class="items">
+    <div class="icon-wrapper">
+      <i class="fa fa-th-list"></i>
+    </div>
+    <div class="block-name">
+      <a>Courses</a>
+    </div>
   </div>
+  <div class="items">
+    <div class="icon-wrapper">
+      <i class="fa fa-th-large"aria-hidden="true"></i>
+    </div>
+    <div class="block-name">
+      <a>Departments</a>
+    </div>
+  </div>  
+<container class="log">
 
 
 
-  <script>
-    function openSlideMenu(){
-      document.getElementById('side-menu').style.width = '250px';
-      document.getElementById('main').style.marginLeft = '250px';
-    }
+  
+</container>
 
-    function closeSlideMenu(){
-      document.getElementById('side-menu').style.width = '0';
-      document.getElementById('main').style.marginLeft = '0';
-    }
-  </script>
+
+</div>
+  
+  
+
 </body>
+
 </html>
