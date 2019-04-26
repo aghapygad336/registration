@@ -5,57 +5,55 @@
 
     <title>Welcome</title>
     <link rel="stylesheet" href="LOGIN.css">
-    <form action="http://localhost:3000/Api/" method="GET">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $(".login-form").hide();
-                $("login").css("background", "none");
-                $(".login").click(function () {
-                    $(".signup-form").hide();
-                    $(".login-form").show();
-                });
-                $(".signup").click(function () {
-                    $(".signup-form").show();
-                    $(".login-form").hide();
-                });
-
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script>
+          $(document).ready(function () {
+              $(".login-form").hide();
+              $("login").css("background", "none");
+              $(".login").click(function () {
+                  $(".signup-form").hide();
+                  $(".login-form").show();
+              });
+              $(".signup").click(function () {
+                  $(".signup-form").show();
+                  $(".login-form").hide();
+              });
             });
         </script>
         <html>
 
         <body>
-          <form method="post" action="http://localhost:3000/api/addStudent" id="doSignUp">
+          <form id="signupForm" action="http://localhost:3000/api/addStudent" method="post">
             <div class="container">
                 <div class="signup">Sign Up</div>
                 <div class="login">Login</div>
                 <div class="signup-form">
-                    <input type="text" placeholder="Your Email Address" class="input" name="Email"><br />
-                    <input type="password" placeholder="Choose a Password" class="input" name="Password"><br />
-                                        <input type="text" placeholder="Choose a Username" class="input" name="sUser"><br />
-                        <ul>
+                    <input type="text" placeholder="Your Email Address" class="input" name="Email" required><br />
+                    <input type="password" placeholder="Choose a Password" class="input" name="Password" required><br />
+                    <input type="text" placeholder="Enter your name" class="input" name="Name" required><br />
+                    <ul>
                       <li>
-                        <input type="radio" name="name" id="one" checked />
+                        <input type="radio" name="gender" id="one" value="Male" checked />
                         <label for="one">Male</label>
-                        
                         <div class="check"></div>
                       </li>
-                      
                       <li>
-                        <input type="radio" name="name" id="two" />
+                        <input type="radio" name="gender" id="two" value="Female" />
                         <label for="two">Female</label>
-                        
                         <div class="check"></div>
                       </li>
                     </ul>
+
                     <input type="submit" value="signup Here" class="btn" style="font-family:Orator Std">
-                      
+                  </form> 
+                  </body>
+                <form id="loginForm" action="http://localhost:3000/api/signIn" method="post" >   
                 </div>
                 <div class="login-form">
-                  <input type="text" placeholder="Email or Username" class="input"><br />
-                  <input type="password" placeholder="Password" class="input"><br />
+                  <input type="text" placeholder="Email" class="input" name="Email"><br />
+                  <input type="password" placeholder="Password" class="input" name="Password"><br />
                   <input type="submit" value="Login Here" class="btn" style="font-family:Orator Std"><br>
+                </form>
                   <span><a href="#">I forgot my username or password.</a></span>
               </div>
   
@@ -63,8 +61,6 @@
 
          
             </div>
-          </form>
-
 
         </body>
 

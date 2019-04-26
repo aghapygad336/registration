@@ -122,8 +122,8 @@ app.post('/addStudent', function(req, res, next) {
   var sql ="INSERT INTO Student ( `Name`, `Email`, `Password`,`gender`) VALUES ("+'"' +req.body.Name+'"' +"," +'"' +req.body.Email+'"' +"," +'"' +req.body.Password+'"'+"," +'"' +req.body.gender+'"'+")"
   con.query(sql, function (err, result, fields) {
       if (err) throw err;
-      console.log(result);
-      res.send(result);
+      res.redirect('/Users/khaledmohab/College/DataBase/registration/coursesView.html');
+    
     }) 
 });
 
@@ -134,6 +134,7 @@ app.get('/getAllStudent', function(req, res, next) {
       if (err) throw err;
       console.log(result);
       res.send(result);
+      
     }) 
 });
 
@@ -146,6 +147,27 @@ con.query("SELECT * FROM Student where ID="+req.params.id, function (err, result
     res.send(result[0]);
   }) 
 });
+
+app.post('/signIn',(req,res,next)=>{
+  var db = req.con;
+  var data = "";
+  console.log(req.body)
+  con.query("SELECT * FROM Student where Email="+"'"+req.body.Email+"'" , function (err, result, fields) {
+    //console.log(req.body)
+    if(result!=undefined){
+      if(result[0].Password==req.body.password)
+      { 
+        if (err) throw err;
+        res.redirect('./coursesView.html');
+        //res.redirect('/coursesView');
+      }else
+        res.send("wrong password");
+      }else
+        res.send(err);
+    }
+    ) 
+  
+})
 app.delete('/DeleteStudent/Name', function(req, res, next) {
   var db = req.con;
   var data = "";
