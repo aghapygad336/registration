@@ -151,14 +151,13 @@ con.query("SELECT * FROM Student where ID="+req.params.id, function (err, result
 app.post('/signIn',(req,res,next)=>{
   var db = req.con;
   var data = "";
-  console.log(req.body)
   con.query("SELECT * FROM Student where Email="+"'"+req.body.Email+"'" , function (err, result, fields) {
     //console.log(req.body)
     if(result!=undefined){
-      if(result[0].Password==req.body.password)
+      if(result[0].Password==req.body.Password)
       { 
         if (err) throw err;
-        res.redirect('./coursesView.html');
+        res.sendFile(__dirname +'/coursesView.html');
         //res.redirect('/coursesView');
       }else
         res.send("wrong password");

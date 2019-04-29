@@ -6,7 +6,7 @@
    }
    
    body{
-       background-color:rgb(245, 189, 200);
+       background-color:rgb(152, 152, 152);
        background-size:cover;
        background-repeat: no-repeat;
        background-position: center;
@@ -61,7 +61,7 @@ width: 100%;
    
    .btn{
    widows:150px;
-   background:linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b);
+   background:linear-gradient(90deg,#03a9f4,#9a8e90,#ffeb3b);
        background-size:125%;
    height: 60px;
    line-height: 60px;
@@ -74,7 +74,7 @@ width: 100%;
        }
 
    .btn:hover{
-       background:#f441a5 ; 
+       background:#41bbf4 ; 
    }
    
    span a{
