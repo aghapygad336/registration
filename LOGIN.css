@@ -6,11 +6,11 @@
    }
    
    body{
-       background-color:rgb(152, 152, 152);
+       background-color:rgb(202, 200, 200), 0.575);
        background-size:cover;
        background-repeat: no-repeat;
        background-position: center;
-       font-family: fantasy;
+       font-family: fantasy
    }
    .container{
    
