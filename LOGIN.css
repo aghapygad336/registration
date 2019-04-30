@@ -6,8 +6,8 @@
    }
    
    body{
-       background-color:rgb(202, 200, 200), 0.575);
-       background-size:cover;
+       background-color:wheat ;
+              background-size:cover;
        background-repeat: no-repeat;
        background-position: center;
        font-family: fantasy;
@@ -115,6 +115,19 @@ margin: 10px 0;
 font-weight: 900;
 }
 
+.eyeblock
+{
+color:black;
+width: 15px;
+    background:none;
+    border: none;
+   padding: 20px;
+    cursor: pointer;
+
+}
+
+
+
 
 /* Card
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -164,4 +177,3 @@ input#one:checked ~ .check { transform: translate(-50px, 33px); }
 
 /* Radio Input #2  */
 input#two:checked ~ .check { transform: translate(-50px, -25px); }
-
