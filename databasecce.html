@@ -5,6 +5,9 @@
 
     <title>Welcome</title>
     <link rel="stylesheet" href="LOGIN.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script>
           $(document).ready(function () {
@@ -19,7 +22,12 @@
                   $(".login-form").hide();
               });
             });
+
+
+
+
         </script>
+        <script src="showpass.js"></script>
         <html>
 
         <body>
@@ -28,8 +36,14 @@
                 <div class="signup">Sign Up</div>
                 <div class="login">Login</div>
                 <div class="signup-form">
-                    <input type="text" placeholder="Your Email Address" class="input" name="Email" required><br />
-                    <input type="password" placeholder="Choose a Password" class="input" name="Password" required><br />
+                    <input type="text" placeholder="Your Email Address" class="input" name="Email" required>            
+                              <input id="showPASS"type="password" placeholder="Choose a Password" class="input" name="Password" required>
+
+
+                   <div class="eyeblock">    <button onclick="showPassword();" class="eyeblock" >Show Password<i class="far fa-eye"></i></button>
+                   </div>
+
+  
                     <input type="text" placeholder="Enter your name" class="input" name="Name" required><br />
                     <ul>
                       <li>
