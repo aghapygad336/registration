@@ -3,7 +3,8 @@ const router = express.Router();;
 var app = express();
 const bodyParser = require('body-parser');
 var mysql = require('mysql');
-const http = require('http')
+const http = require('http');
+var swig  = require('swig');
 
 var con = mysql.createConnection({
     host: "remotemysql.com",
@@ -153,11 +154,26 @@ app.post('/signIn',(req,res,next)=>{
   var data = "";
   con.query("SELECT * FROM Student where Email="+"'"+req.body.Email+"'" , function (err, result, fields) {
     //console.log(req.body)
-    if(result!=undefined){
+    if(result!=undefined ){
       if(result[0].Password==req.body.Password)
-      { 
+      { console.log(result[0])
         if (err) throw err;
-        res.sendFile(__dirname +'/coursesView.html');
+        if(result[0].department_id!=null&&result[0].department_id!=0){
+        res.render(__dirname +'/studentView.html',{
+          Email:result[0].Email,
+          Name:result[0].Name,
+          Gender:result[0].Gender,
+          ID:result[0].ID
+        });}
+        else{
+          con.query("SELECT * FROM department", function (err, dresult, fields) {
+            if(!err){
+          res.render(__dirname +'/departmentView.html',{
+            ID:result[0].ID,
+            Depts:dresult
+          })}
+          })
+        }
         //res.redirect('/coursesView');
       }else
         res.send("wrong password");
