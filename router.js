@@ -80,7 +80,6 @@ app.get('/getAllDepts', function(req, res, next) {
   var data = "";
   con.query("SELECT * FROM department", function (err, result, fields) {
       if (err) throw err;
-      console.log(result);
       res.send(result);
     }) 
 });
@@ -123,7 +122,7 @@ app.post('/addStudent', function(req, res, next) {
   var sql ="INSERT INTO Student ( `Name`, `Email`, `Password`,`gender`) VALUES ("+'"' +req.body.Name+'"' +"," +'"' +req.body.Email+'"' +"," +'"' +req.body.Password+'"'+"," +'"' +req.body.gender+'"'+")"
   con.query(sql, function (err, result, fields) {
       if (err) throw err;
-      res.redirect('/Users/khaledmohab/College/DataBase/registration/coursesView.html');
+      res.writeHead('127.0.0.1:3001/coursesView.html');
     
     }) 
 });

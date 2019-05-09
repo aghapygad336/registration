@@ -31,12 +31,12 @@
         <html>
 
           <body>
-            <form id="signupForm" action="http://localhost:3000/api/addStudent" method="post">
+            <form id="signupForm" action="http://localhost:3000/addStudent" method="post">
               <div class="container">
                   <div class="signup">Sign Up</div>
                   <div class="login">Login</div>
                   <div class="signup-form">
-                      <input type="text" placeholder="Your Email Address" class="input" name="Email" required><br />
+                      <input type="text" placeholder="Your Email Address" class="input" name="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br />
                       <div class="eyeblock">
                       <input id="showPASS"type="password" placeholder="Choose a Password" class="eyeblock" name="Password" required>
                       <a onclick="showPassword();" class="eyeblock"><i class="far fa-eye"></i></a>
@@ -61,7 +61,7 @@
                       <input type="submit" value="signup Here" class="btn" style="font-family:Orator Std">
                     </form> 
                     </body>
-                    <form id="loginForm" action="http://localhost:3000/api/signIn" method="post" >   
+                    <form id="loginForm" action="http://localhost:3000/signIn" method="post" >   
                     </div>
                     <div class="login-form">
                       <input type="text" placeholder="Email" class="input" name="Email"><br />

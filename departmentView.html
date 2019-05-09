@@ -1,23 +1,88 @@
 <!DOCTYPE html>
 <html>
   <head>
-      
-<link rel="stylesheet" type="text/css"href="styleDep.css" >   
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<style>
+            body{
+              margin:  0;
+              padding: 0;
+background:#b33c64; 
 
-<script>
-  $('.btn').click(function allDept(){
-  const Url='http://localhost:3000/api/getAllDepts'
+          }          
+          h1{
+            position: absolute;
+              top:-150%;
+              left: 15%;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: #811438;
+          }
+          
 
-  $.getJSON(Url,function(data){
-  for (var i in data) {
-      var element = document.createElement("h2");
-      element.innerHTML = data[i].Name;
-      console.log(`${data[i]}`);
-      $("#data").append(element);
-    }})
-    });     
-  </script>
+
+          
+          .box{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+
+              
+              
+          }
+          .box select
+          {              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+            padding: 10px;
+              width: 250px;
+              height: 50px;
+              border:none;
+              font-size: 20px;
+              box-shadow: 0 5px 25px rgba(0,0,0,.5);
+          outline:none;}
+
+.box:before{
+content:'';
+text-align:center;
+position:absolute;
+top: 0;
+right: 0;
+width:50px;
+height: 50px;
+background:#007ce0;
+pointer-events: none;
+}
+.box:hover:before
+{
+
+    background:#145081;
+
+
+
+}
+
+ul{
+  position: absolute;
+  top: 150%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+}
+.box li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+.box li a{
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  transition: all ease-in-out 250ms;
+}
+.box li a:hover{
+  color: #b9b9b9;
+}
+
+</style>
+
       
     <meta charset="utf-8">
 
@@ -25,6 +90,7 @@
       <title> Departments </title>
   </head>
   <body>
+      
   <div class="box" >
 
   <h1>Departments</h1>
@@ -35,14 +101,50 @@
           <option id="data"></option>
           </select>
           <div id="data" ></div>
-          <input class="btn" type="button" onclick="allDept()" value="Click" />                <ul>
-                  <li><a href="#"><i class="fas fa-home"aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fas fa-user-graduate"aria-hidden="true"></i></a></li>
+          <button class="btn" type="button" id="clck" >click</button>                
+          
+          
+          
+          <ul>
+                  <li><a href="/index.html"><i class="fas fa-home"aria-hidden="true"></i></a></li>
+                  <li><a href="/studentView.html"><i class="fas fa-user-graduate"aria-hidden="true"></i></a></li>
 
                   </ul>
       </div>
 
-      
+      <!DOCTYPE html>
+<html>
+<body onload="checkCookies()">
+
+<p id="demo"></p>
+
+<script>
+function checkCookies() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      cFunction(this);
+    }
+ };
+  xhr.open('GET', 'http://localhost:3000/getAllDepts', true);
+  console.log(xhr)
+  var Depts=JSON.parse(xhr.responseText)
+  console.log("fdjsnfksjf")
+
+        for (var i in Depts) 
+        {
+            var element = document.createElement("h2");
+            element.innerHTML = Depts[i].Name;
+            console.log(Depts);
+            ("#data").append(element);
+        }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
+
      
 </body>
 </html>
